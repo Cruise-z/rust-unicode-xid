@@ -1,5 +1,29 @@
-template-repository (1.0-1) unstable; urgency=medium
+unicode-xid (0.2.4-1) UNRELEASED; urgency=medium
 
-  * Initial release
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * This is a packaged version suitable for the Deepin23 system
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Cruise.zrz <Cruise.zrz@gmail.com>  Fri, 30 Jun 2023 15:25:43 +0800
+
+rust-unicode-xid (0.2.4-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package unicode-xid 0.2.4 from crates.io using debcargo 2.6.0
+
+ -- Peter Michael Green <plugwash@debian.org>  Wed, 18 Jan 2023 04:43:19 +0000
+
+rust-unicode-xid (0.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Package unicode-xid 0.2.0 from crates.io using debcargo 2.2.10
+
+  [ Ximin Luo ]
+  * Fix Upstream-Contact syntax in d/copyright
+
+ -- nicoo <nicoo@debian.org>  Wed, 14 Aug 2019 01:45:00 +0200
+
+rust-unicode-xid (0.1.0-1) unstable; urgency=medium
+
+  * Package unicode-xid 0.1.0 from crates.io using debcargo 2.1.2
+
+ -- Ximin Luo <infinity0@debian.org>  Thu, 05 Jul 2018 02:32:24 -0700
