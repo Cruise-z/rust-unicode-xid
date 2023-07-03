@@ -1,15 +1,39 @@
-Source: template-repository
+Source: unicode-xid
 Section: unknown
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Cruise.zrz <Cruise.zrz@gmail.com>
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>
+Standards-Version: 4.6.1
+Homepage: <insert the upstream URL, if relevant>
+X-Cargo-Crate: unicode-xid
+#Vcs-Browser: https://salsa.debian.org/debian/unicode-xid
+#Vcs-Git: https://salsa.debian.org/debian/unicode-xid.git
+Rules-Requires-Root: no
 
-Package: template-repository
+Package: unicode-xid
 Architecture: any
+Multi-Arch: same
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Provides:
+ librust-unicode-xid+bench-dev (= ${binary:Version}),
+ librust-unicode-xid+default-dev (= ${binary:Version}),
+ librust-unicode-xid+no-std-dev (= ${binary:Version}),
+ librust-unicode-xid-0-dev (= ${binary:Version}),
+ librust-unicode-xid-0+bench-dev (= ${binary:Version}),
+ librust-unicode-xid-0+default-dev (= ${binary:Version}),
+ librust-unicode-xid-0+no-std-dev (= ${binary:Version}),
+ librust-unicode-xid-0.2-dev (= ${binary:Version}),
+ librust-unicode-xid-0.2+bench-dev (= ${binary:Version}),
+ librust-unicode-xid-0.2+default-dev (= ${binary:Version}),
+ librust-unicode-xid-0.2+no-std-dev (= ${binary:Version}),
+ librust-unicode-xid-0.2.4-dev (= ${binary:Version}),
+ librust-unicode-xid-0.2.4+bench-dev (= ${binary:Version}),
+ librust-unicode-xid-0.2.4+default-dev (= ${binary:Version}),
+ librust-unicode-xid-0.2.4+no-std-dev (= ${binary:Version})
+Description: Determine whether characters have the XID_Start or XID_Continue properties according to Unicode Standard Annex #31 - Rust source code
+ This package contains the source for the Rust unicode-xid crate, packaged by
+ debcargo for use with cargo and dh-cargo.
